@@ -1,1 +1,6 @@
 ini latihan bootstrap CRUD dan GIT
+
+
+
+database : kantor 
+table : karyawan - Id, Nama, Alamat, jenis_kelamin,Pendidikan,Divisi,
