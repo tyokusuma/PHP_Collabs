@@ -36,7 +36,7 @@
 <body>
 	<center><div class="form-box">
 		<h1 style="text-align:center;">Create Data</h1><br>
-		<form>
+		<form action="prosescreate.php" method="post">
 	  		<div class="form-group row">
 	    		<label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
 	    		<div class="col-sm-10">
@@ -54,11 +54,11 @@
 	      			<legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
 	      			<div class="col-sm-10">
 	        			<div class="custom-control custom-radio custom-control-inline">
-  							<input type="radio" id="inputJenisKelamin1" name="jeniskelamin" class="custom-control-input">
+  							<input type="radio" id="inputJenisKelamin1" name="jenis_kelamin" class="custom-control-input" value="Pria">
   							<label class="custom-control-label" for="inputJenisKelamin1">Pria</label>
 						</div>
 						<div class="custom-control custom-radio custom-control-inline">
-  							<input type="radio" id="inputJenisKelamin2" name="jeniskelamin" class="custom-control-input">
+  							<input type="radio" id="inputJenisKelamin2" name="jenis_kelamin" class="custom-control-input" value="Wanita">
   							<label class="custom-control-label" for="inputJenisKelamin2">Wanita</label>
 						</div>
 	        		</div>
@@ -78,6 +78,7 @@
 	  		</div>
 	  		<div class="form-group row">
 	    		<div class="col-sm-10">
+	      			<button type="reset" class="btn btn-light">Reset</button>
 	      			<button type="submit" class="btn btn-primary">Submit</button>
 	    		</div>
 	  		</div>
