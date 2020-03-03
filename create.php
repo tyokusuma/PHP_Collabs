@@ -1,70 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Input Data</title>
-	<meta charset="UTF-8">
-	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>Create Data</title>
 	<style>
-		*{
+		* {
 			margin: 0;
 			padding: 0;
 		}
-		body{
-			background-color: #000000;
+		body {
+			padding: 60px 0 80px 0;
+		    font-size: 18px;
+		    font-weight: 300;
+		    background-image: linear-gradient(to bottom right, #595959, #d9d9d9);
+		    background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		    line-height: 30px;
+		    text-align: center;
 		}
-		.box{
-			width: 350px;
-			margin: 10px auto;
-			padding: 30px;
-			background-color: white;
-			border-radius: 5px;
-			border: 1px solid #c5c4c4;
-			color: #5a5757
+		.form-box {
+			margin-top: 50px auto;
+			width: 85%;
+			padding: 25px 25px 30px 25px;
+			background: #444;
+			background: rgba(0, 0, 0, 0.3);
+			-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
+			text-align: left;
 		}
-		.active, input[type='text']{
-			width: 350px;
-			height: 35px;
-			margin: 10px 0 0 0;
-			border-radius: 3px;
-			background-color: #efefef;
-		}
-		input{
-			height: 30px;
-			width: 60px;
-			border-radius: 3px;
-		}
-		input[type='radio']{
-			height: 20px;
-			width: 60px;
-			border-radius: 3px;
-		}
-		textarea{
-			width: 350px;
-			height: 35px;
-			margin: 10px 0 0 0;
-			border-radius: 3px;
-			background-color: #efefef;
+		label, legend, h1 {
+			color: white;
 		}
 	</style>
 </head>
 <body>
-	<form action="prosescreate.php" method="post">
-	<div class="box">
-		<center><h2>Create Data</h2></center>
-		<h3>Nama</h3>
-		<input class="active" name="nama" type="text"><br><br>
-		<h3>Alamat</h3>
-		<textarea name="alamat"></textarea><br><br>
-		<h3>Jenis Kelamin</h3> <br>
-		<input type="radio" name="jeniskelamin" value="pria">Pria
-		<input type="radio" name="jeniskelamin" value="wanita">Wanita <br><br>
-		<h3>Pendidikan Terakhir</h3>
-		<input class="active" name="pendidikan" type="text"><br><br>
-		<h3>Divisi</h3>
-		<input class="active" name="divisi" type="text"><br><br>
-		<br><br>
-		<center><input type="submit" value="Submit"></center>
-	</div>	
-	</form>
+	<center><div class="form-box">
+		<h1 style="text-align:center;">Create Data</h1><br>
+		<form>
+	  		<div class="form-group row">
+	    		<label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
+	    		<div class="col-sm-10">
+	      			<input id="inputNama" type="text" class="form-control" name="nama">
+	    		</div>
+	  		</div>
+	  		<div class="form-group row">
+	    	<label for="inputAlamat" class="col-sm-2 col-form-label">Alamat</label>
+	    		<div class="col-sm-10">
+	      			<textarea id="inputAlamat" class="form-control" name="alamat" rows="3"></textarea>
+	    		</div>
+	  		</div>
+	  		<fieldset class="form-group">
+	    		<div class="row">
+	      			<legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
+	      			<div class="col-sm-10">
+	        			<div class="custom-control custom-radio custom-control-inline">
+  							<input type="radio" id="inputJenisKelamin1" name="jeniskelamin" class="custom-control-input">
+  							<label class="custom-control-label" for="inputJenisKelamin1">Pria</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+  							<input type="radio" id="inputJenisKelamin2" name="jeniskelamin" class="custom-control-input">
+  							<label class="custom-control-label" for="inputJenisKelamin2">Wanita</label>
+						</div>
+	        		</div>
+	    		</div>
+	  		</fieldset>
+	  		<div class="form-group row">
+	    		<label for="inputPendidikan" class="col-sm-2 col-form-label">Pendidikan Terakhir</label>
+	    		<div class="col-sm-10">
+	      			<input id="inputPendidikan" type="text" class="form-control" name="pendidikan">
+	    		</div>
+	  		</div>
+	  		<div class="form-group row">
+	    		<label for="inputDivisi" class="col-sm-2 col-form-label">Divisi</label>
+	    		<div class="col-sm-10">
+	      			<input id="inputDivisi" type="text" class="form-control" name="divisi">
+	    		</div>
+	  		</div>
+	  		<div class="form-group row">
+	    		<div class="col-sm-10">
+	      			<button type="submit" class="btn btn-primary">Submit</button>
+	    		</div>
+	  		</div>
+		</form>
+	</div></center>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

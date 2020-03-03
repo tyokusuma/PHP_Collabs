@@ -7,7 +7,7 @@ $jeniskelamin = $_POST['jeniskelamin'];
 $pendidikan = $_POST['pendidikan'];
 $divisi = $_POST['divisi'];
 
-if (empty($nama) || (empty($alamat) || (empty($jeniskelamin) || (empty($pendidikan) || (empty($divisi)) {
+if ((empty($nama) || (empty($alamat) || (empty($jeniskelamin) || (empty($pendidikan) || (empty($divisi)) {
 	echo "Field tidak boleh kosong!
 	<meta http-equiv='refresh' content='0; url=create.php'>";
 }
