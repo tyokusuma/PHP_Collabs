@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2020 at 04:35 AM
+-- Generation Time: Mar 04, 2020 at 04:47 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -46,6 +46,25 @@ INSERT INTO `karyawan` (`id`, `nama`, `alamat`, `jenis_kelamin`, `pendidikan`, `
 (2, 'Annisa', 'Bandung', 'Wanita', 'S1', 'idk'),
 (3, 'ARS', 'BDG', 'Wanita', 'S1', '-');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `id` int(11) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `username`, `password`) VALUES
+(1, 'admin', '12345');
+
 --
 -- Indexes for dumped tables
 --
@@ -57,6 +76,12 @@ ALTER TABLE `karyawan`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -65,6 +90,12 @@ ALTER TABLE `karyawan`
 --
 ALTER TABLE `karyawan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
