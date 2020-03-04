@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2020 at 05:34 AM
+-- Generation Time: Mar 04, 2020 at 04:35 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -21,7 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `kantor`
 --
---------------------------------------------------------
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `karyawan`
@@ -35,6 +36,15 @@ CREATE TABLE `karyawan` (
   `pendidikan` varchar(100) NOT NULL,
   `divisi` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `karyawan`
+--
+
+INSERT INTO `karyawan` (`id`, `nama`, `alamat`, `jenis_kelamin`, `pendidikan`, `divisi`) VALUES
+(1, 'Nisa', 'Bdg', 'on', 'S1', '-'),
+(2, 'Annisa', 'Bandung', 'Wanita', 'S1', 'idk'),
+(3, 'ARS', 'BDG', 'Wanita', 'S1', '-');
 
 --
 -- Indexes for dumped tables
@@ -54,7 +64,7 @@ ALTER TABLE `karyawan`
 -- AUTO_INCREMENT for table `karyawan`
 --
 ALTER TABLE `karyawan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
