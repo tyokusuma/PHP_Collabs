@@ -13,7 +13,8 @@
 	$query = mysqli_query($koneksi,$sql);
 
 	if ($sql) {
-		echo "berhasil update";
+		echo "berhasil update
+		<meta http-equiv='refresh' content='1; url=data_karyawan.php'>";
 	} else {
 		echo "gagal update";
 	}

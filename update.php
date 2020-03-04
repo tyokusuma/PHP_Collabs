@@ -38,7 +38,7 @@
 	<?php
 			include "koneksi.php";
 			
-			$id = $_GET['id'];
+			$id = $_GET['no'];
 			$query = "select * from karyawan where id = '$id'";
 			$sql = mysqli_query($koneksi,$query);
 			while ($data = mysqli_fetch_array($sql)) {
@@ -53,6 +53,11 @@
 	<center><div class="form-box">
 		<h1 style="text-align:center;">Create Data</h1><br>
 		<form action="proses_update.php" method="post">
+			<div class="form-group row">
+	    		<div class="col-sm-10">
+	      			<input id="inputNama" type="hidden" class="form-control" name="id" value="<?php echo $id ?>">
+	    		</div>
+	  		</div>
 	  		<div class="form-group row">
 	    		<label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
 	    		<div class="col-sm-10">
@@ -62,7 +67,7 @@
 	  		<div class="form-group row">
 	    	<label for="inputAlamat" class="col-sm-2 col-form-label">Alamat</label>
 	    		<div class="col-sm-10">
-	      			<textarea id="inputAlamat" class="form-control" name="alamat" rows="3" value="<?php echo $alamat ?>"></textarea>
+	      			<textarea id="inputAlamat" class="form-control" name="alamat" rows="3"><?php echo $alamat ?></textarea>
 	    		</div>
 	  		</div>
 	  		<fieldset class="form-group">
@@ -70,11 +75,11 @@
 	      			<legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
 	      			<div class="col-sm-10">
 	        			<div class="custom-control custom-radio custom-control-inline">
-  							<input type="radio" id="inputJenisKelamin1" name="jenis_kelamin" class="custom-control-input" value="<?php echo $jenis_kelamin ?>">
+  							<input type="radio" id="inputJenisKelamin1" name="jenis_kelamin" value="Pria" class="custom-control-input"<?php if ($jenis_kelamin=="Pria") echo "checked";?>>
   							<label class="custom-control-label" for="inputJenisKelamin1">Pria</label>
 						</div>
 						<div class="custom-control custom-radio custom-control-inline">
-  							<input type="radio" id="inputJenisKelamin2" name="jenis_kelamin" class="custom-control-input" value="<?php echo $jenis_kelamin ?>">
+  							<input type="radio" id="inputJenisKelamin2" name="jenis_kelamin" value="Wanita" class="custom-control-input" <?php if ($jenis_kelamin=="Wanita") echo "checked";?>>
   							<label class="custom-control-label" for="inputJenisKelamin2">Wanita</label>
 						</div>
 	        		</div>
