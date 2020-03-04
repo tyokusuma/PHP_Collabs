@@ -12,7 +12,7 @@
 			padding: 60px 0 80px 0;
 		    font-size: 18px;
 		    font-weight: 300;
-		    background-image: linear-gradient(to bottom right, #595959, #d9d9d9);
+		    /*background-image: linear-gradient(to bottom right, #595959, #d9d9d9);*/
 		    background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -28,9 +28,9 @@
 			-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
 			text-align: left;
 		}
-		label, legend, h1 {
+		/*label, legend, h1 {
 			color: white;
-		}
+		}*/
 	</style>
 </head>
 <body>
