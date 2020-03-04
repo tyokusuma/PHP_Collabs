@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<title>Create Data</title>
+	<title>Update Data</title>
 	<style>
 		* {
 			margin: 0;
@@ -53,6 +53,7 @@
 	<center><div class="form-box">
 		<h1 style="text-align:center;">Create Data</h1><br>
 		<form action="proses_update.php" method="post">
+	      	<input id="inputID" type="hidden" class="form-control" name="id" value="<?php echo $id ?>">
 	  		<div class="form-group row">
 	    		<label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
 	    		<div class="col-sm-10">
@@ -62,7 +63,7 @@
 	  		<div class="form-group row">
 	    	<label for="inputAlamat" class="col-sm-2 col-form-label">Alamat</label>
 	    		<div class="col-sm-10">
-	      			<textarea id="inputAlamat" class="form-control" name="alamat" rows="3" value="<?php echo $alamat ?>"></textarea>
+	      			<textarea id="inputAlamat" class="form-control" name="alamat" rows="3"><?php echo $alamat ?></textarea>
 	    		</div>
 	  		</div>
 	  		<fieldset class="form-group">
@@ -70,11 +71,11 @@
 	      			<legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
 	      			<div class="col-sm-10">
 	        			<div class="custom-control custom-radio custom-control-inline">
-  							<input type="radio" id="inputJenisKelamin1" name="jenis_kelamin" class="custom-control-input" value="<?php echo $jenis_kelamin ?>">
+  							<input type="radio" id="inputJenisKelamin1" name="jenis_kelamin" class="custom-control-input" <?php if ($jenis_kelamin ==="Pria") {echo "Checked";} ?> value="Pria">
   							<label class="custom-control-label" for="inputJenisKelamin1">Pria</label>
 						</div>
 						<div class="custom-control custom-radio custom-control-inline">
-  							<input type="radio" id="inputJenisKelamin2" name="jenis_kelamin" class="custom-control-input" value="<?php echo $jenis_kelamin ?>">
+  							<input type="radio" id="inputJenisKelamin2" name="jenis_kelamin" class="custom-control-input" <?php if ($jenis_kelamin ==="Wanita") {echo "Checked";} ?> value="Wanita">
   							<label class="custom-control-label" for="inputJenisKelamin2">Wanita</label>
 						</div>
 	        		</div>
