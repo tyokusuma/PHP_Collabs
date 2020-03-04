@@ -9,7 +9,7 @@
   <style type="text/css">
 
     body {
-      background-color: grey;
+      background-color: white;
     }
 
     header {
@@ -19,9 +19,10 @@
       color: black;
     }
 
-    table {
+    table, td {
       background: white;
-      text-align: center; 
+      text-align: center;
+      border: 1px solid black;
     }
 
   </style>
@@ -51,7 +52,7 @@
           $query = "select * from karyawan";
           $sql = mysqli_query($koneksi,$query);
           while ($data = mysqli_fetch_array($sql)) {
-            //$id = $data['id'];
+            $id = $data['id'];
             $nama = $data['nama'];
             $alamat = $data['alamat'];
             $jenis_kelamin = $data['jenis_kelamin'];
@@ -65,9 +66,9 @@
             <td><?php echo $jenis_kelamin; ?></td>
             <td><?php echo $pendidikan; ?></td>
             <td><?php echo $divisi; ?></td>
-            <td><a href="">Update</a></td>
-            <td><a href="">Delete</a></td>
-            <td><a href="">Create</a></td>
+            <td><a href="update.php?<?php echo "no=$id"?>">Update</a></td>
+            <td><a href="proses_delete.php?<?php echo "no=$id"?>">Delete</a></td>
+            <td><a href="create.php">Create</a></td>
         </tr>
 
         <?php }?>
