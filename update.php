@@ -38,7 +38,7 @@
 	<?php
 			include "koneksi.php";
 			
-			$id = $_GET['id'];
+			$id = $_GET['no'];
 			$query = "select * from karyawan where id = '$id'";
 			$sql = mysqli_query($koneksi,$query);
 			while ($data = mysqli_fetch_array($sql)) {
@@ -71,11 +71,13 @@
 	      			<legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
 	      			<div class="col-sm-10">
 	        			<div class="custom-control custom-radio custom-control-inline">
-  							<input type="radio" id="inputJenisKelamin1" name="jenis_kelamin" class="custom-control-input" <?php if ($jenis_kelamin ==="Pria") {echo "Checked";} ?> value="Pria">
+
+  							<input type="radio" id="inputJenisKelamin1" name="jenis_kelamin" value="Pria" class="custom-control-input"<?php if ($jenis_kelamin=="Pria") echo "checked";?>>
   							<label class="custom-control-label" for="inputJenisKelamin1">Pria</label>
 						</div>
 						<div class="custom-control custom-radio custom-control-inline">
-  							<input type="radio" id="inputJenisKelamin2" name="jenis_kelamin" class="custom-control-input" <?php if ($jenis_kelamin ==="Wanita") {echo "Checked";} ?> value="Wanita">
+  							<input type="radio" id="inputJenisKelamin2" name="jenis_kelamin" value="Wanita" class="custom-control-input" <?php if ($jenis_kelamin=="Wanita") echo "checked";?>>
+
   							<label class="custom-control-label" for="inputJenisKelamin2">Wanita</label>
 						</div>
 	        		</div>

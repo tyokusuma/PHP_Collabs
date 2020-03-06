@@ -42,6 +42,7 @@
           <th>Jenis Kelamin</th>
           <th>Pendidikan</th>
           <th>Divisi</th>
+          <th>Foto</th>
           <th colspan="3">Pilih</th>
         </tr>
       </thead>
@@ -58,6 +59,8 @@
             $jenis_kelamin = $data['jenis_kelamin'];
             $pendidikan = $data['pendidikan'];
             $divisi = $data['divisi'];
+            $foto = $data['foto'];
+
         ?>
 
         <tr>
@@ -66,6 +69,7 @@
             <td><?php echo $jenis_kelamin; ?></td>
             <td><?php echo $pendidikan; ?></td>
             <td><?php echo $divisi; ?></td>
+            <td><img src="foto/<?php echo $foto ?>" alt="" width="150px" height="100px"></td>
             <td><a href="update.php?<?php echo "no=$id"?>">Update</a></td>
             <td><a href="proses_delete.php?<?php echo "no=$id"?>">Delete</a></td>
             <td><a href="create.php">Create</a></td>
