@@ -12,11 +12,13 @@
 	$sql = "update karyawan set nama='$nama', alamat='$alamat', jenis_kelamin='$jenis_kelamin',pendidikan='$pendidikan' where id='$id'";
 	$query = mysqli_query($koneksi,$sql);
 
+
 	if ($sql) {
 		echo "berhasil update
 		<meta http-equiv='refresh' content='1; url=data_karyawan.php'>";
 	} else {
-		echo "gagal update";
+		echo "gagal update
+		<meta http-equiv='refresh' content='0;url=data_karyawan.php'> ";
 	}
 
 ?>

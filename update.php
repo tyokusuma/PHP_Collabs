@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<title>Create Data</title>
+	<title>Update Data</title>
 	<style>
 		* {
 			margin: 0;
@@ -53,11 +53,7 @@
 	<center><div class="form-box">
 		<h1 style="text-align:center;">Create Data</h1><br>
 		<form action="proses_update.php" method="post">
-			<div class="form-group row">
-	    		<div class="col-sm-10">
-	      			<input id="inputNama" type="hidden" class="form-control" name="id" value="<?php echo $id ?>">
-	    		</div>
-	  		</div>
+	      	<input id="inputID" type="hidden" class="form-control" name="id" value="<?php echo $id ?>">
 	  		<div class="form-group row">
 	    		<label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
 	    		<div class="col-sm-10">
@@ -75,11 +71,13 @@
 	      			<legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
 	      			<div class="col-sm-10">
 	        			<div class="custom-control custom-radio custom-control-inline">
+
   							<input type="radio" id="inputJenisKelamin1" name="jenis_kelamin" value="Pria" class="custom-control-input"<?php if ($jenis_kelamin=="Pria") echo "checked";?>>
   							<label class="custom-control-label" for="inputJenisKelamin1">Pria</label>
 						</div>
 						<div class="custom-control custom-radio custom-control-inline">
   							<input type="radio" id="inputJenisKelamin2" name="jenis_kelamin" value="Wanita" class="custom-control-input" <?php if ($jenis_kelamin=="Wanita") echo "checked";?>>
+
   							<label class="custom-control-label" for="inputJenisKelamin2">Wanita</label>
 						</div>
 	        		</div>
